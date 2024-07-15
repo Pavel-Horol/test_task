@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .input-primary {
+        @apply pl-[22px] mb-[13px] caret-gray-500 w-[248px] h-[51px] bg-primary-input leading-6 placeholder-primary-placeholder  text-[13px] text-white rounded-md;
+        outline: none;
+        border: 2px solid transparent;
+    }
+     .input-primary:focus {
+        @apply border-gray-500 ;
+        outline: none;
+    }
+    .input-primary::placeholder {
+        @apply text-primary-placeholder;
+        transition: color 0.2s;
+    }
+
+    .input-primary:focus::placeholder {
+        @apply text-transparent;
+    }
+
+    .btn-primary {
+        @apply w-[248px] h-[51px] bg-raspberry leading-6 rounded-md font-bold text-white text-[15px] ;
+    }
+    .text-stroke {
+        white-space: nowrap;
+        font-weight: bolder;
+        margin-left: -5px;
+        color: transparent;
+        font-size: 123px;
+        -webkit-text-stroke: 2px rgba(255, 255, 255, 0.1);
+    }
+    .circle {
+         @apply rounded-[50%] absolute z-[1];
+        background: radial-gradient(circle, rgba(51, 47, 101, 0.6) 0%, rgba(51, 47, 101, 0.6) 30%, rgba(51, 47, 101, 0.01) 70%);
+    }
+    .phone-input {
+        @apply w-full;
+    }
+
+}
